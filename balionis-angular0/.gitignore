@@ -1,0 +1,11 @@
+# compiled output
+/dist
+package-lock.json
+
+# dependencies
+/node_modules
+
+# IDE
+/.idea
+
+Thumbs.db
