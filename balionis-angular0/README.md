@@ -7,8 +7,8 @@ This set of packages is meant to remind me how to build, package and run with an
 ## Build
 
 ```
-npm install // or, npm link
-ng build // or, ng serve
+npm install 
+npm run build
 ```
 
 ## Debug (Visual Studio Code)
