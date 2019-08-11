@@ -12,6 +12,24 @@ This set of packages is meant to provide me with the prototypes of build, test, 
    - run as spring boot (webapp); 
    - have logger and config services;
 
+3. balionis-angular2
+   - spike ng-bootstrap tooltip.
+   
+4. balionis-angular3
+   - spike ag-grid v17.1 with custom column, custom data and custom renderer.
+   
+5. balionis-angular4
+   - spike ag-grid v20.1 'basic' table functionality.
+
+6. balionis-angular5
+   - spike ag-grid v17.1 with grouping and 'enterprise' datasource (need license key).
+   
+7. balionis-angular6
+   - spike ag-grid v20.1 with 'treeData' and 'serverSide' datasource (need license key).
+
+8. balionis-angular7
+   - spike ag-grid v17.1 with local grouping and custom expand/collapse event handling.
+   
 # How?
 
 ## Node Setup 

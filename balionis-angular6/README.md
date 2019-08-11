@@ -1,6 +1,6 @@
-# BalionisAngular4
+# BalionisAngular6
 
-This project tries to demo ag-grid 'basic' table functionality.
+This project spikes ag-grid v20.1 with 'treeData' and 'serverSide' datasource (need license key).
 
 ## Development server
 

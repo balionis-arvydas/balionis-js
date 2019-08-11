@@ -1,6 +1,6 @@
-# BalionisAngular5
+# BalionisAngular7
 
-This project demos ag-grid with grouping and custom expand event (hopefully)
+This project spikes ag-grid with grouping and custom expand event (hopefully)
 
 ## Build
 

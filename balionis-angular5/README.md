@@ -1,6 +1,6 @@
 # BalionisAngular5
 
-This project demos ag-grid with grouping and enterprise datasource
+This project spikes ag-grid v17.1 with grouping and 'enterprise' datasource (need license key).
 
 Warning: when used with enterprise datasource the treeData seem to support only 1st level.
 
