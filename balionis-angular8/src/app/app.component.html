@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<ag-grid-angular 
+    #agGrid
+    style="width: 700px; height: 500px;" 
+    class="ag-theme-balham-dark"
+    [rowData]="rowData" 
+    [defaultColDef]="defaultColDef"
+    [columnDefs]="columnDefs"
+    [animateRows]="true"
+    [deltaRowDataMode]="true"
+    [rowSelection]="multiple"
+    [getRowNodeId]="getRowNodeId"
+    [enableFilter]="true"
+    (gridReady)="onGridReady($event)"
+></ag-grid-angular>

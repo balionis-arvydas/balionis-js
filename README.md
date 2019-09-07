@@ -29,7 +29,10 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 
 8. balionis-angular7
    - spike ag-grid v17.1 with local grouping and custom expand/collapse event handling.
-   
+
+9. balionis-angular8
+   - spike ag-grid v19.0 'basic' table functionality.
+
 # How?
 
 ## Node Setup 
