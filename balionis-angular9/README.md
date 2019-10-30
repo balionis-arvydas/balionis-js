@@ -121,21 +121,21 @@ _Note: make sure that user which was used to generate _auth= in .npmrc has nexus
 
 ## Testing libary in a separate app
 
-$ ng new lib-tester
-$ cd lib-tester
+$ ng new balionis-angular9-tester
+$ cd balionis-angular9-tester
 $ npm run start
 
-$ npm install example-ng6-lib 
+$ npm install balionis-angular9-lib 
 or 
-$ npm install ../example-ng6-lib/dist/example-ng6-lib/example-ng6-lib-0.0.1.tgz
+$ npm install ../balionis-angular9-lib/dist/balionis-angular9-lib/balionis-angular9-lib-1.0.0.tgz
 
 $ vi src/app/app.module.ts
 ```
-import { ExampleNg6LibModule } from 'example-ng6-lib';
+import { BalionisAngular9LibModule } from 'balionis-angular9-lib';
 ...
 imports: [
     BrowserModule,
-    ExampleNg6LibModule
+    BalionisAngular9LibModule
   ],
 ...
 ```
@@ -143,40 +143,43 @@ imports: [
 $ vi src/app/app.component.html
 ```
 ...
- <enl-foo></enl-foo>
+<h2>External Library Example:</h2>
+<bal-foo></bal-foo>
  ```
 
-## Document 
+## Document library
 
+$ cd balionis-angular9-lib
 $ vi package.json
 ```
  "scripts": {
   ...
-  "build:lib": "ng build ng-example-library",
-  "copy-license": "copy .\\LICENSE .\\dist\\ng-example-library",
-  "copy-readme": "copy .\\README.md .\\dist\\ng-example-library",
-  "copy-files": "npm run copy-license && npm run copy-readme",
-  "pack@lib": "cd dist/ng-example-library && npm pack",
-  "package": "npm run build:lib && npm run copy-files && npm run npm:pack"
+  "lib:build": "ng build balionis-angular9-lib",
+  "lib:pack": "cd dist/balionis-angular9-lib && npm pack",
+  "copy:license": "copy ./LICENSE ./dist/balionis-angular9-lib",
+  "copy:readme": "copy ./README.md ./dist/balionis-angular9-lib",
+  "copy:files": "npm run copy:license && npm run copy:readme",
+  "package": "npm run lib:build && npm run copy:files && npm run lib:pack"
 },
 ```
 
-$ vi projects\example-ng6-lib\package.json
+$ vi projects\balionis-angular9-lib\package.json
 ```
 {
-  "name": "ng-example-library",
-  "version": "1.2.0",
-  "description": "This is a simple example Angular Library published to npm.",
+  "name": "balionis-angular9-lib",
+  "version": "1.0.0",
+  "description": "This is a simple example angular library published to npm.",
   "keywords" :["Angular","Library"],
   "license" : "SEE LICENSE IN LICENSE",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/t-palmer/ng-example-library"
+    "url" : "https://github.com/balionis-arvydas/balionis-js/balionis-angular9-lib"
   },
-  "homepage" :"https://medium.com/@palmer_todd/the-angular-library-series-publishing-ce24bb673275",
+  "homepage" :"https://balionis.com/",
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
-  }
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  ...
 }
 ```
