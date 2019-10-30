@@ -33,6 +33,9 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 9. balionis-angular8
    - spike ag-grid v19.0 'basic' table functionality.
 
+10. balionis-angular9
+   - spike build, package, test and publish angular library.
+
 # How?
 
 ## Node Setup 
@@ -118,4 +121,48 @@ Package                      Version
 @schematics/update           0.6.7
 rxjs                         6.2.0
 typescript                   2.7.2
+```
+
+## Angular Upgrade
+
+1. install
+
+```
+npm uninstall -g @angular/cli
+npm cache clean --force
+```
+
+```
+npm install -g @angular/cli@7.3.9
+```
+
+2. verify
+
+```
+>ng version
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 7.3.9
+Node: 8.11.2
+OS: win32 x64
+Angular:
+...
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.13.9
+@angular-devkit/core         7.3.9
+@angular-devkit/schematics   7.3.9
+@schematics/angular          7.3.9
+@schematics/update           0.13.9
+rxjs                         6.3.3
+typescript                   3.2.4
+
 ```
