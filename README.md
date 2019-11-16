@@ -36,6 +36,12 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 10. balionis-angular9
    - spike build, package, test and publish angular library.
 
+20. balionis-react0
+   - capture original react generated prototype.
+
+21. balionis-react1
+   - cleaned up react prototype.
+
 # How?
 
 ## Node Setup 
