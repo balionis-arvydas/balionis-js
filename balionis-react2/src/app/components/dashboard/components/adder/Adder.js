@@ -12,7 +12,7 @@ class Adder extends React.Component {
 
   handleChange(event) {
     const value = event.target.value;
-    const disabled = value && value.length < 3;
+    const disabled = value === null || value.length < 3;
     this.setState({
       value,
       disabled
