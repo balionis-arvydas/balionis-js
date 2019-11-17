@@ -42,6 +42,9 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 21. balionis-react1
    - cleaned up react prototype.
 
+22. balionis-react2
+   - spike dashboard (parent) with the entry form to add and each entry has remove.
+
 # How?
 
 ## Node Setup 
