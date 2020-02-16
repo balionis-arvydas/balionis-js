@@ -1,6 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": "react",
+  "plugins": ["jest"],
+  "extends": [
+    "react",
+    "plugin:jest/recommended"
+  ],
   "env": {
     "browser": true,
     "node": true

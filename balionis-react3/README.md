@@ -111,5 +111,47 @@ module.exports = {
 
 ### Step 3)
 
-TODO: add jest 
+`npm install --save-dev jest babel-jest react-test-renderer enzyme eslint-plugin-jest enzyme-adapter-react-16 @types/jest`
+* _jest_ - core package;
+* _babel-jest_ - package and _babel-jest_ together with babel-preset transforms our code inside of the test environment.
+* _react-test-renderer_ - used for snapshot testing.
+* _enzyme_ - used for DOM testing.
+* _eslint-plugin-jest_ - defines eslint rules for jest.
+* _@types/jest_ - eslint rules for 'describe' and 'it'.
 
+`vi package.json`
+```
+  "scripts": {
+    // add the line
+    "test": "jest"
+  },
+  // mock import for styles or images
+  "jest":{
+    "moduleNameMapper":{
+      "\\.(css|less|sass|scss)$": "<rootDir>/test/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/test/__mocks__/fileMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "./test/setupTests.js"
+    ]
+  }
+```
+
+`mkdir -p test/__mocks__`
+`touch test/__mocks__/styleMock.js`
+`touch test/__mocks__/fileMock.js`
+
+`vi .eslint.json`
+```
+  "plugins": ["jest"],
+  "extends": [
+    "react",
+    "plugin:jest/recommended"
+  ],
+```
+
+`mkdir -p src/components/__tests__/__snapshots__`
+`touch src/components/__tests__/App.test.js`
+
+`npm run test -- -u`
+* This will update the snapshots.
