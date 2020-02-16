@@ -45,6 +45,9 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 22. balionis-react2
    - spike dashboard (parent) with the entry form to add and each entry has remove.
 
+23. balionis-react3
+   - spike to build react app from scatch without using create-react-app and react-scripts.
+
 # How?
 
 ## Node Setup 
