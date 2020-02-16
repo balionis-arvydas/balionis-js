@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import App from '../App';
 
 describe('App', () => {
-    it("snapshot", () => {
+    test("snapshot", async () => {
         const component = renderer.create(
             <App/>,
         );
@@ -12,7 +12,7 @@ describe('App', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it("message", () => {
+    test("message", async () => {
         const component = shallow(<App/>);
         expect(component.text()).toEqual('Hello World.');
     });

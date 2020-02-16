@@ -111,13 +111,15 @@ module.exports = {
 
 ### Step 3)
 
-`npm install --save-dev jest babel-jest react-test-renderer enzyme eslint-plugin-jest enzyme-adapter-react-16 @types/jest`
+`npm install --save-dev jest babel-jest react-test-renderer enzyme eslint-plugin-jest enzyme-adapter-react-16`
+`npm install --save-dev @types/jest @babel/runtime @babel/plugin-transform-runtime`
 * _jest_ - core package;
 * _babel-jest_ - package and _babel-jest_ together with babel-preset transforms our code inside of the test environment.
 * _react-test-renderer_ - used for snapshot testing.
 * _enzyme_ - used for DOM testing.
 * _eslint-plugin-jest_ - defines eslint rules for jest.
 * _@types/jest_ - eslint rules for 'describe' and 'it'.
+* _@babel/runtime_ and _@babel/plugin-transform-runtime_ - enables tests to use 'async' and 'await'.
 
 `vi package.json`
 ```
@@ -132,7 +134,7 @@ module.exports = {
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/test/__mocks__/fileMock.js"
     },
     "setupFilesAfterEnv": [
-      "./test/setupTests.js"
+      "./test/jest.setupTests.js"
     ]
   }
 ```
