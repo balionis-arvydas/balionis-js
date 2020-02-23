@@ -1,0 +1,11 @@
+{
+  "web": {
+  },
+  "server": {
+    "logLevel": "info",
+    "sessionTimeout": 10000,
+    "CORS": {
+      "whitelist": []
+    }
+  }
+}

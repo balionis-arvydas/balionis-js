@@ -1,7 +1,9 @@
-This project is meant to remind me how to build axios and websockets on top of the naked react application (balionis-react3)
+This project is meant to remind me how to use 'axios' and 'socket.io' and 'express/routes' on top of the naked react application (balionis-react3)
 
-# Step-by-Step
+# server 
 
-## Step 1) 
+This sub-module runs express server based "backend". 
 
-TODO.
+# web
+
+This sub-module runs react based "frontend". 
