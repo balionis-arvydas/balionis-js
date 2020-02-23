@@ -1,14 +1,14 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/ui/node_modules
-/ui/package-lock.json
+**/node_modules
+**/package-lock.json
 
 # testing
-/ui/coverage
+/web/coverage
 
 # production
-/ui/dist
+**/dist
 
 # misc
-.idea
+**/.idea
