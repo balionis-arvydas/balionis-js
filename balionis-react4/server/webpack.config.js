@@ -4,12 +4,18 @@ const path = require('path');
 
 const fs = require("fs");
 
+const environment = process.env.NODE_ENV || 'production';
+
 const nodeLibs = {};
-fs.readdirSync(path.join(__dirname, 'node_modules'))
+
+if (environment === 'development') {
+  fs.readdirSync(path.join(__dirname, 'node_modules'))
     .filter(x => x !== '.bin')
     .forEach(mod => { nodeLibs[mod] = 'commonjs ' + mod; });
-
-const environment = process.env.NODE_ENV || 'production';
+} else {
+  nodeLibs['express'] = 'commonjs express';
+  nodeLibs['config'] = 'commonjs config';
+}
 
 module.exports = {
   entry: {
@@ -17,7 +23,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name]-bundle.js'
+    filename: 'app-bundle.js'
   },
   target: 'node',
   mode: environment,

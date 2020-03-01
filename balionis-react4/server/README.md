@@ -1,8 +1,6 @@
 This project is meant to remind me how to build express based backend.
 
-# Step-by-Step
-
-## Step 1) server side...
+## Collect Skeleton
 
 ```
 $ cd server
@@ -34,4 +32,30 @@ $ vi package.json
 $ touch webpack.config.js
 $ touch babel.config.js
 $ touch .eslinkrc.json
+```
+
+### Verify Development Mode
+
+```
+$ npm run start
+```
+```
+$ chrome http://localhost:8090/v1/entities/1234
+# expected response: entityId=1234
+```
+
+### Verify Production Mode
+
+```
+$ cd ../web
+$ npm run build
+$ cd ../server
+$ npm run build
+$ npm run serve
+```
+```
+$ chrome http://localhost:8090/public
+# expected response: <TBD>
+$ chrome http://localhost:8090/v1/entities/1234
+# expected response: entityId=1234
 ```

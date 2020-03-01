@@ -4,6 +4,7 @@ const express = require('express');
 const winston = require('winston');
 const expressWinston = require('express-winston');
 const expressSession = require('express-session');
+const MemoryStore = require('memorystore')(expressSession)
 const config = require('config');
 const helmet = require('helmet');
 const compression = require('compression');
@@ -89,6 +90,9 @@ const sessionConfig = {
   resave: true,
   saveUninitialized: true,
   rolling: true,
+  store: new MemoryStore({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  }),
   cookie: {
       maxAge: sessionTimeout
   }

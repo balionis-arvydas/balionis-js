@@ -23,6 +23,7 @@
     "express-winston": "^4.0.3",
     "helmet": "^3.21.2",
     "http-proxy": "^1.18.0",
+    "memorystore": "^1.6.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {
