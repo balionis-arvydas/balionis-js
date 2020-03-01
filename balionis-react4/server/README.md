@@ -51,11 +51,12 @@ $ cd ../web
 $ npm run build
 $ cd ../server
 $ npm run build
-$ npm run serve
+$ export  NODE_ENV=production
+$ node ./dist/app-bundle.js
 ```
 ```
-$ chrome http://localhost:8090/public
-# expected response: <TBD>
+$ chrome http://localhost:8090/public/
+# expected response in yellow colours: Hello World.
 $ chrome http://localhost:8090/v1/entities/1234
 # expected response: entityId=1234
 ```
