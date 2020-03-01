@@ -40,8 +40,8 @@ $ touch .eslinkrc.json
 $ npm run start
 ```
 ```
-$ chrome http://localhost:8090/v1/entities/1234
-# expected response: entityId=1234
+$ chrome http://localhost:8090/v1/user/1234
+# expected response: userId=1234
 ```
 
 ### Verify Production Mode
@@ -57,6 +57,6 @@ $ node ./dist/app-bundle.js
 ```
 $ chrome http://localhost:8090/public/
 # expected response in yellow colours: Hello World.
-$ chrome http://localhost:8090/v1/entities/1234
-# expected response: entityId=1234
+$ chrome http://localhost:8090/v1/user/1234
+# expected response: userId=1234
 ```

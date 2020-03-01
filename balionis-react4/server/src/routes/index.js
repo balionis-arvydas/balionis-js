@@ -1,5 +1,5 @@
-const entities = require('./entities');
+const user = require('./user');
 
 module.exports = router => {
-    entities(router)
+    user(router)
 };
