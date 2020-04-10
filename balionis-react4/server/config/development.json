@@ -3,6 +3,11 @@
     "url": "http://localhost:8080/"
   },
   "server": {
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "CORS": {
+      "whitelist": [
+        "http://localhost:8080"
+      ]
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "balionis-react4-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "balionis-react4",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,6 +24,7 @@
     "helmet": "^3.21.2",
     "http-proxy": "^1.18.0",
     "memorystore": "^1.6.2",
+    "react-uuid": "^1.0.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {
@@ -41,5 +42,9 @@
     "nodemon": "^2.0.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/balionis-arvydas/balionis-js.git"
   }
 }

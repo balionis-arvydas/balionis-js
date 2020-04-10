@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -56,6 +57,10 @@ module.exports = {
             template: "./public/index.html",
             favicon: "./public/favicon.ico",
             filename: "./index.html"
-        })
+        }),
+        new webpack.DefinePlugin({
+            "process.env.REACT_APP_STAGE": JSON.stringify(process.env.REACT_APP_STAGE),
+            "process.env.REACT_APP_LOG_LEVEL": JSON.stringify(process.env.REACT_APP_LOG_LEVEL),
+        }),
     ]
 };

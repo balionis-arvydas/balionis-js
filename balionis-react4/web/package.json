@@ -1,10 +1,10 @@
 {
   "name": "balionis-react4-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "balionis-react4",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "cross-env REACT_APP_STAGE=local REACT_APP_LOG_LEVEL=debug webpack-dev-server --open --mode development",
     "test": "jest",
     "build": "webpack --mode production",
     "serve": "http-server -p 8080 ./dist"
@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
+    "loglevel": "^1.6.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -26,6 +28,7 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
@@ -55,5 +58,9 @@
     "setupFilesAfterEnv": [
       "./test/jest.setupTests.js"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/balionis-arvydas/balionis-js.git"
   }
 }
