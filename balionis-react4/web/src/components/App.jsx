@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.less";
 import { readUser } from "../actions/userActions";
-import logger from '../services/logger';
 
 class App extends Component {
     constructor () {
@@ -9,12 +8,10 @@ class App extends Component {
         this.state = { value: "", disabled: true, responses: [] };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.log = logger.create();
     }
 
     handleChange (event) {
         const value = event.target.value;
-        this.log.debug('handleChange:', 'value=' + value);
         const disabled = value === null || value.length < 3;
         this.setState({
             value,

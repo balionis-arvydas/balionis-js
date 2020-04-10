@@ -4,7 +4,7 @@ import { isEmptyString } from "../helpers";
 
 log.setLevel(config.LOG_LEVEL);
 
-const create = (loggerName) => !isEmptyString(loggerName) ? log.getLogger(name) : log;
+const create = (loggerName) => !isEmptyString(loggerName) ? log.getLogger(loggerName) : log;
 
 export default {
     create

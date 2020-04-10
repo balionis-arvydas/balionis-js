@@ -1,4 +1,4 @@
-This project is meant to remind me how to build express based backend.
+This sub-project is meant to remind me how to build express based backend.
 
 ## Collect Skeleton
 
@@ -41,7 +41,7 @@ $ npm run start
 ```
 ```
 $ chrome http://localhost:8090/v1/user/1234
-# expected response: userId=1234
+# expected response: { type: 'GetUserResponse', ... }
 ```
 
 ### Verify Production Mode
@@ -51,12 +51,15 @@ $ cd ../web
 $ npm run build
 $ cd ../server
 $ npm run build
-$ export  NODE_ENV=production
+$ export NODE_ENV=production
+$ export REACT_APP_STAGE=production
+$ export REACT_APP_LOG_LEVEL=debug
 $ node ./dist/app-bundle.js
 ```
+
 ```
 $ chrome http://localhost:8090/public/
 # expected response in yellow colours: Hello World.
 $ chrome http://localhost:8090/v1/user/1234
-# expected response: userId=1234
+# expected response: { type: 'GetUserResponse', ... }
 ```
