@@ -48,6 +48,12 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 23. balionis-react3
    - spike to build react app from scatch without using create-react-app and react-scripts.
 
+24. balionis-react4
+   - spike to build react app using axios and express, using balionis-react3 as a baseline.
+
+24. balionis-react5
+   - spike to build react app using socket.io and express, using balionis-react4 as a baseline.
+
 # How?
 
 ## Node Setup 
