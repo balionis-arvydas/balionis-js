@@ -1,0 +1,13 @@
+{
+  "web": {
+    "url": "http://localhost:8080/"
+  },
+  "server": {
+    "logLevel": "debug",
+    "CORS": {
+      "whitelist": [
+        "http://localhost:8080"
+      ]
+    }
+  }
+}
