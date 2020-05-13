@@ -14,6 +14,7 @@ const cors = require('cors');
 const routes = require('./routes');
 const c = require('./constants');
 const log = require('./log');
+const io = require("./sockets");
 
 const SSO_TOKEN = 'sso token';
 
@@ -74,7 +75,7 @@ const corsOptions = {
             callback(null, true);
         } else {
             const msg = `Origin: ${origin} not allowed by CORS`;
-            log.info(msg);
+            log.warn(msg);
             callback(new Error(msg));
         }
     },
@@ -98,7 +99,9 @@ const sessionConfig = {
   }
 };
 
-app.use(expressSession(sessionConfig));
+const session = expressSession(sessionConfig);
+
+app.use(session);
 
 routes(router);
 
@@ -123,9 +126,18 @@ app.use(expressWinston.errorLogger({
 
 const PORT = process.env.PORT || 8090;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     log.info(`listening to localhost:${PORT}....`);
     log.info('press ctrl+c to quit.');
+});
+
+io.use((socket, next) => {
+  session(socket.request, socket.request.res || {}, next);
+});
+
+io.attach(server, {
+    pingInterval: 60000,
+    pingTimeout: 60000,
 });
 
 module.exports = app
