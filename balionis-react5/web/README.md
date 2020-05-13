@@ -1,6 +1,6 @@
 This sub-project is meant to remind me how to build axios based frontend.
 
-## Collect Skeleton
+## Baseline
 
 ```
 $ view ../../balionis-react3/README.md
