@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["jest"],
+  "extends": [
+    "react",
+    "plugin:jest/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

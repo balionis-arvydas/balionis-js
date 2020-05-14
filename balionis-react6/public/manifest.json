@@ -1,0 +1,13 @@
+{
+  "short_name": "balionis-react6",
+  "name": "balionis-react6",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16 256x256 48x48 32x32 128x128 64x64",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
