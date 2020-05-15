@@ -1,9 +1,17 @@
 import React from "react";
 import ReactDOM from 'react-dom';
+import { Provider } from "react-redux";
+
+import App from "./App";
+import store from "./redux/store";
+
 import "./index.css";
-import App from "./components/App";
 
+const app = document.getElementById("app");
 
-const wrapper = document.getElementById("app");
-
-wrapper ? ReactDOM.render(<App />, wrapper) : false;
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    app
+);
