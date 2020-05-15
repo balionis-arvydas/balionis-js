@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development",
     "serve": "http-server -p 8080 ./dist"
@@ -50,18 +51,5 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.3"
-  },
-  "jest": {
-    "verbose": true,
-    "moduleNameMapper": {
-      "\\.(css|less|sass|scss)$": "<rootDir>/test/__mocks__/styleMock.js",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/test/__mocks__/fileMock.js"
-    },
-    "setupFilesAfterEnv": [
-      "./test/jest.setupTests.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/*.spec.(js|jsx)"
-    ]
   }
 }

@@ -57,6 +57,9 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 24. balionis-react6
    - spike to build react app using redux, using balionis-react3 as a baseline.
 
+24. balionis-react7
+   - spike to build react e2e app using puppeteer, balionis-react3 as a baseline while testing balionis-react6.
+
 # How?
 
 ## Node Setup 

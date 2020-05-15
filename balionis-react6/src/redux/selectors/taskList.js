@@ -5,7 +5,7 @@ export const getTaskList = store => {
 };
 
 export const getTasks = store => {
-    return getTaskList(store).tasks ? getTaskList(store).tasks : [];
+    return getTaskList(store).tasks || [];
 };
 
 export const getTasksByState = (store, taskState) => {
