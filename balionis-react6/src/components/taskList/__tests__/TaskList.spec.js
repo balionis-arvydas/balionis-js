@@ -1,19 +1,36 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { mockStore } from '../../../redux/__tests__/mockStore';
+
 import TaskList from '../TaskList';
 
 describe('TaskList', () => {
-    test("snapshot", async () => {
-        const component = renderer.create(
-            <TaskList/>,
-        );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+    const tasks = [
+        { id: 1, content: '12345' },
+        { id: 2, content: '23456' },
+    ];
+
+    let store;
+
+    beforeAll(() => {
+        jest.resetAllMocks();
     });
 
-    test("message", async () => {
-        const component = shallow(<TaskList/>);
-        expect(component.text()).toEqual('Hello World.');
+    beforeEach(() => {
+        store = mockStore({
+            taskList: { tasks }
+        });
+        store.dispatch = jest.fn();
     });
+
+    test("snapshot", async () => {
+        const component = renderer.create(
+            <Provider store={store}>
+                <TaskList/>,
+            </Provider>
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
 });

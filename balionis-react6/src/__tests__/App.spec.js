@@ -1,19 +1,31 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { mockStore } from '../redux/__tests__/mockStore';
+
 import App from '../App';
 
-describe('App', () => {
-    test("snapshot", async () => {
-        const component = renderer.create(
-            <App/>,
-        );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+describe('AppComponent', () => {
+    let store;
+
+    beforeAll(() => {
+        jest.resetAllMocks();
     });
 
-    test("message", async () => {
-        const component = shallow(<App/>);
-        expect(component.text()).toEqual('Hello World.');
+    beforeEach(() => {
+        store = mockStore({
+            taskList: { tasks: [] }
+        });
+        store.dispatch = jest.fn();
     });
+
+    test("snapshot", async () => {
+        const component = renderer.create(
+            <Provider store={store}>
+                <App/>,
+            </Provider>
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
 });

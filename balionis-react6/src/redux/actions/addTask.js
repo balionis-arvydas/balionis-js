@@ -2,10 +2,10 @@ import { ADD_TASK } from "./actionTypes";
 
 let nextTaskId = 0;
 
-export const addTask = content => ({
+export const addTask = (content, taskId) => ({
     type: ADD_TASK,
     payload: {
-        id: ++nextTaskId,
+        id: (taskId ? taskId : ++nextTaskId),
         content,
     }
 });
