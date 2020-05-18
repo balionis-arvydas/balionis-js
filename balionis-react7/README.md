@@ -41,3 +41,57 @@ npm install --save-dev jest-html-reporters
 ```
 mkdir -p src/__tests__
 ```
+
+## Verify
+
+### Start balionis-react6 
+```
+npm install --verbose
+npm run start
+# this should open a browser at http://localhost:8080
+```
+
+### Run e2e 
+```
+npm run test:local
+
+> balionis-react7@1.0.0 test:local C:\com.balionis\dev\balionis-js\balionis-react7
+> cross-env NODE_ENV=test DEBUG_MODE=true jest --runInBand --config jest.config.local.js
+
+PASS src/__tests__/App.spec.js
+  ● Console
+
+    console.info
+      login: url=http://localhost:8080/
+
+      at _callee2$ (src/actions.js:15:19)
+
+    console.info
+      should_add_task: xpath=//div[@data-automation-id='app']//li[contains(@class,'taskWrapper')]/span[contains(text(),'123456')]
+
+      at _callee2$ (src/__tests__/steps.js:18:19)
+
+    console.info
+      should_add_task: xpath=//div[@data-automation-id='app']//li[contains(@class,'taskWrapper')]/span[contains(text(),'234567')]
+
+      at _callee2$ (src/__tests__/steps.js:18:19)
+
+    console.info
+      should_add_task: xpath=//div[@data-automation-id='app']//li[contains(@class,'taskWrapper')]/span[contains(text(),'345678')]
+
+      at _callee2$ (src/__tests__/steps.js:18:19)
+
+    console.info
+      should_remove_task: xpath=//div[@data-automation-id='app']//li[contains(@class,'taskWrapper')]/span[contains(text(),'123456')]
+
+      at _callee4$ (src/__tests__/steps.js:35:19)
+
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        4.565 s, estimated 5 s
+Ran all test suites.
+📦 reporter is created on: C:\com.balionis\dev\balionis-js\balionis-react7\html-reports\report.html
+
+```
