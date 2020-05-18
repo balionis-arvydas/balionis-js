@@ -12,7 +12,7 @@ const login = async (testURL, waitForRedirect) => {
     jest.setTimeout(c.LOGIN_TIMEOUT);
     const page = await open(testURL, { timeout: c.LOGIN_TIMEOUT });
 
-    console.info("login: url=" + page.url());
+    await console.info("login: url=" + page.url());
 
     if (waitForRedirect) {
         await page.waitForNavigation();

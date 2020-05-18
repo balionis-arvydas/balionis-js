@@ -11,6 +11,9 @@ module.exports = {
     "preset": "jest-puppeteer",
     "globals": {
         "homeURL": testURL,
+        "reportsFolder": testReportsFolder,
+        "reportsFilename": testReportsFilename,
+        "reportsSnapOn": ["failed"],
     },
     "testURL": testURL,
     "verbose": true,

@@ -1,4 +1,5 @@
 import actions from "../actions";
+import helpers from "../helpers";
 import steps from "./steps";
 
 describe('App', () => {
@@ -10,18 +11,19 @@ describe('App', () => {
     ];
 
     let page;
+    let snapper;
 
     beforeAll(async () => {
         page = await actions.login();
-        // snap = await helpers.initSnapper(page);
+        snapper = await helpers.initSnapper(page);
     });
 
     afterEach(async () => {
-        // await helpers.flushSnapper(page, snap);
+        await snapper.save();
     });
 
     afterAll(async () => {
-        // await helpers.flushSnapper(page, snap);
+        await snapper.save();
         await page.close();
     });
 

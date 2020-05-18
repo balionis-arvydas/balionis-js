@@ -2,7 +2,7 @@ import helpers from "../helpers";
 import c from "../constants";
 
 const should_have_tasks = async (page, expected) => {
-    const tasks = await helpers.findArrayBySelector(page, c.TASK_LIST_TASKS_SELECTOR);
+    const tasks = await helpers.getElementsBySelector(page, c.TASK_LIST_TASKS_SELECTOR);
     const actual = await Promise.all(tasks.map(task => helpers.getElementTextValue(task)));
 
     expect(actual).toEqual(expected);
@@ -14,8 +14,8 @@ const should_add_task = async (page, text) => {
     const button = await page.waitForSelector(c.ADD_TASK_BUTTON_SELECTOR);
     await button.click();
 
-    const xpath = helpers.formatString(c.TASK_LIST_TASKS_XPATH, text);
-    console.info(`should_add_task: xpath=${xpath}`);
+    const xpath = helpers.formatSelector(c.TASK_LIST_TASKS_XPATH, text);
+    await console.info(`should_add_task: xpath=${xpath}`);
 
     const task = await page.waitForXPath(xpath);
 
@@ -31,8 +31,8 @@ const should_add_tasks = async (page, tasks) => {
 };
 
 const should_remove_task = async (page, text) => {
-    const xpath = helpers.formatString(c.TASK_LIST_TASKS_XPATH, text);
-    console.info(`should_remove_task: xpath=${xpath}`);
+    const xpath = helpers.formatSelector(c.TASK_LIST_TASKS_XPATH, text);
+    await console.info(`should_remove_task: xpath=${xpath}`);
 
     const task = await page.waitForXPath(xpath);
     await task.click();

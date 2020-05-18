@@ -4,15 +4,19 @@
   "description": "This project is meant to remind me how to build puppeteer integration application from scratch",
   "main": "index.js",
   "scripts": {
-    "test:local": "cross-env NODE_ENV=test DEBUG_MODE=true jest --runInBand --config jest.config.local.js"
+    "test:local": "cross-env NODE_ENV=test DEBUG_MODE=true jest --runInBand --config jest.config.local.js",
+    "flow:init": "flow init",
+    "flow:status": "flow status"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
+    "@babel/preset-flow": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
     "@babel/runtime": "^7.9.6",
     "@types/jest": "^25.2.2",
@@ -24,6 +28,8 @@
     "eslint": "^7.0.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-jest": "^23.11.0",
+    "flow-bin": "^0.125.1",
+    "flow-typed": "^3.1.0",
     "jest": "^26.0.1",
     "jest-html-reporters": "^1.2.1",
     "jest-puppeteer": "^4.4.0",
