@@ -17,7 +17,6 @@ npm install --save-dev @types/puppeteer @types/jest-environment-puppeteer
 * @babel/runtime and @babel/plugin-transform-runtime - enables tests to use 'async' and 'await'.
 * @types/puppeteer - defines typescript types of puppeteer 
 * @types/jest-environment-puppeteer - type definitions for jest-puppeteer.config.js global.context/debug/...
-// * @types/expect-puppeteer - type definitions for expect.toMatch/toClick/...  
 
 ```
 npm install --save-dev @babel/core @babel/preset-env
@@ -37,6 +36,11 @@ npm install --save-dev cross-env
 npm install --save-dev jest-html-reporters 
 ```
 * cross-env - enables NODE_ENV=test windows/linux transparency 
+
+```
+npm install --save-dev flow-bin flow-typed @babel/cli @babel/preset-flow
+```
+* flow-bin & flow-typed - enables 'flow' type checking 
 
 ```
 mkdir -p src/__tests__
