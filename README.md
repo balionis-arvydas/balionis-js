@@ -63,6 +63,9 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 28. balionis-react8
    - spike to build react app using react-grid-layout, balionis-react6 (redux) as a baseline.
 
+29. balionis-react9
+   - spike to build react app from scratch with webpack and typescript.
+
 # How?
 
 ## Node Setup 
