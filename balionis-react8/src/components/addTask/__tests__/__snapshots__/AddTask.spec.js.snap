@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTask snapshot 1`] = `
+Array [
+  <div
+    className="addTaskWrapper"
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      Add
+    </button>
+  </div>,
+  ",",
+]
+`;

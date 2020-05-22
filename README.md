@@ -51,14 +51,17 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 24. balionis-react4
    - spike to build react app using axios and express, using balionis-react3 as a baseline.
 
-24. balionis-react5
+25. balionis-react5
    - spike to build react app using socket.io and express, using balionis-react4 as a baseline.
 
-24. balionis-react6
+26. balionis-react6
    - spike to build react app using redux, using balionis-react3 as a baseline.
 
-24. balionis-react7
+27. balionis-react7
    - spike to build react e2e app using puppeteer, balionis-react3 as a baseline while testing balionis-react6.
+
+28. balionis-react8
+   - spike to build react app using react-grid-layout, balionis-react6 (redux) as a baseline.
 
 # How?
 

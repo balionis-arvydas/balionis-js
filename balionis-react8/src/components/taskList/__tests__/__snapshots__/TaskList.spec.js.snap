@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskList snapshot 1`] = `
+Array [
+  <div
+    className="taskListWrapper"
+  >
+    <li
+      className="taskWrapper"
+      onClick={[Function]}
+    >
+      <span>
+        12345
+      </span>
+    </li>
+    <li
+      className="taskWrapper"
+      onClick={[Function]}
+    >
+      <span>
+        23456
+      </span>
+    </li>
+  </div>,
+  ",",
+]
+`;
