@@ -57,6 +57,7 @@ module.exports = {
   },
 };
 ```
+
 ## Verify
 
 ```
@@ -68,4 +69,16 @@ vi package.json
     "serve": "http-server -p 8080 ./dist"
   },
 ```
+
+## Test
+
+```
+npm install --save-dev jest ts-jest @types/jest
+npm install --save-dev react-test-renderer @types/react-test-renderer
+npm install --save-dev enzyme @types/enzyme
+npm install --save-dev enzyme-adapter-react-16 @types/enzyme-adapter-react-16
+```
+
+react-test-renderer - provides snapshot testing
+enzyme - provides DOM testing  
 

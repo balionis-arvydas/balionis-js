@@ -8,8 +8,8 @@ type AppState = {
 }
 
 class App extends React.Component<AppProps, AppState> {
-    constructor() {
-        super({});
+    constructor(props: AppProps) {
+        super(props);
 
         this.state = {
             value: "Hello World."
