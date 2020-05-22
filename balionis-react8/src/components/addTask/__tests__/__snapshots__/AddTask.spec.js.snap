@@ -6,11 +6,13 @@ Array [
     className="addTaskWrapper"
   >
     <input
+      className="addTaskInput"
       onChange={[Function]}
       type="text"
       value=""
     />
     <button
+      className="addTaskButton"
       disabled={true}
       onClick={[Function]}
     >

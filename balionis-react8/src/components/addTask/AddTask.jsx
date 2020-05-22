@@ -36,8 +36,15 @@ class AddTask extends React.Component {
     render () {
         return (
             <div className="addTaskWrapper">
-                <input type="text" value={this.state.value} onChange={(event) => this.handleChange(event)} />
-                <button onClick={(event) => this.handleSubmit(event)} disabled={this.state.disabled}>Add</button>
+                <input type="text"
+                    value={this.state.value}
+                    onChange={(event) => this.handleChange(event)}
+                    className="addTaskInput"/>
+                <button onClick={(event) => this.handleSubmit(event)}
+                    disabled={this.state.disabled}
+                    className="addTaskButton">
+                    Add
+                </button>
             </div>
         );
     }
