@@ -66,6 +66,9 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 29. balionis-react9
    - spike to build react app from scratch with webpack and typescript.
 
+30. balionis-react10
+   - spike to build react app using blueprintjs, using balionis-react9 as a baseline.
+
 # How?
 
 ## Node Setup 
