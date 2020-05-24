@@ -1,3 +1,7 @@
 body {
-    background: gray;
+    border: 1px solid red;
+}
+
+div:focus {
+    outline: 0px solid transparent !important;
 }

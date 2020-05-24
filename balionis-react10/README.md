@@ -3,7 +3,7 @@ This project is meant to remind me how to build react with blueprintjs. I'm usin
 ## Baseline
 
 ```
-npm install --save @blueprintjs/core @blueprintjs/datetime @blueprintjs/icons @blueprintjs/select normalize.css
+npm install --save @blueprintjs/core 
 npm install --save-dev url-loader
 ```
 

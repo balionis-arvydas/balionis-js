@@ -1,10 +1,12 @@
 import * as React from "react";
+import { Tabs, Tab, TabId } from "@blueprintjs/core";
+
 import "./App.less";
 
 type AppProps = {}
 
 type AppState = {
-    value: string;
+    selectedTabId: TabId
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -12,13 +14,27 @@ class App extends React.Component<AppProps, AppState> {
         super(props);
 
         this.state = {
-            value: "Hello World."
-        };
+            selectedTabId: "0"
+        }
+    }
+
+    handleTabChange = (selectedTabId: TabId) => {
+        this.setState({
+            selectedTabId
+        });
     }
 
     render() {
         return (
-            <p className="appWrapper">{this.state.value}</p>
+            <div className="appWrapper">
+                <Tabs id="TabsExample" onChange={this.handleTabChange} selectedTabId={this.state.selectedTabId}>
+                    <Tab id="0" title="Angular" />
+                    <Tab id="1" title="Ember" panelClassName="ember-panel" />
+                    <Tab id="2" title="React" />
+                    <Tab id="3" disabled title="Backbone" />
+                    <Tabs.Expander />
+                </Tabs>
+            </div>
         );
     }
 }
