@@ -69,6 +69,9 @@ This set of packages is meant to provide me with the prototypes of build, test, 
 30. balionis-react10
    - spike to build react app using blueprintjs, using balionis-react9 as a baseline.
 
+30. balionis-react11
+   - spike to build react lib, using balionis-react3 as a baseline.
+
 # How?
 
 ## Node Setup 
