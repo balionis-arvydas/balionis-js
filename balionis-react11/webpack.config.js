@@ -2,7 +2,6 @@
 
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require('copy-webpack-plugin');
 const pkg = require("./package.json");
 
 const libraryName = pkg.name;
@@ -21,11 +20,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'index.css'
-        }),
-        new CopyPlugin({
-            patterns: [
-                { from: 'package.json', to: 'package.json' }
-            ]
         })
     ],
     node: {
