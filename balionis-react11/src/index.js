@@ -1,9 +1,3 @@
-import React from "react";
-import ReactDOM from 'react-dom';
-import "./index.css";
-import App from "./components/App";
+import MyComponent from "./components/MyComponent";
 
-
-const wrapper = document.getElementById("app");
-
-wrapper ? ReactDOM.render(<App />, wrapper) : false;
+export { MyComponent };

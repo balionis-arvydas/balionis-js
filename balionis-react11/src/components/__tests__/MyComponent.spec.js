@@ -1,19 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import App from '../App';
+import MyComponent from '../MyComponent';
 
-describe('App', () => {
+describe('MyComponent', () => {
     test("snapshot", async () => {
         const component = renderer.create(
-            <App/>,
+            <MyComponent/>,
         );
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 
     test("message", async () => {
-        const component = shallow(<App/>);
+        const component = shallow(<MyComponent/>);
         expect(component.text()).toEqual('Hello World.');
     });
 });

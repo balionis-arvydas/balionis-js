@@ -12,7 +12,3 @@ package-lock.json
 
 # misc
 .idea
-
-# example
-/example/node_modules
-/example/package-lock.json
