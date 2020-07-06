@@ -1,0 +1,15 @@
+<div>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div>
+    <app-adder-component (add)="onAdd($event)"></app-adder-component>
+    <ul>
+      <app-entry-component *ngFor="let message of messages; let i = index"
+                           [index]="i"
+                           [message]="message"
+                            (remove)="onRemove($event)">
+      </app-entry-component>
+    </ul>
+  </div>
+</div>
