@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, Link, graphql } from "gatsby"
 import layoutStyles from "./layout.module.css"
 
 const ListLink = props => (
@@ -9,11 +9,22 @@ const ListLink = props => (
   )
 
 export default function Layout({ children }) {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            trademark
+          }
+        }
+      }
+    `
+  )  
   return (
     <div className={layoutStyles.container}>
       <header className={layoutStyles.header}>
         <Link to="/" className={layoutStyles.trademark}>
-          <h3 style={{ display: `inline` }}>MySite</h3>
+          <h3 style={{ display: `inline` }}>{data.site.siteMetadata.trademark}</h3>
         </Link>
         <ul className={layoutStyles.menu}>
           <ListLink to="/">Home</ListLink>
