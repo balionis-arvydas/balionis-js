@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Post from "../components/post"
 import { graphql } from "gatsby"
 
-export default function MyPosts({ data }) {
+export default function Posts({ data }) {
   return (
     <Layout>      
       <div>
@@ -24,10 +24,14 @@ export const query = graphql`
       edges {
         node {
           excerpt
+          fields {
+            slug
+          }  
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
           }
+          id
         }
       }
     }

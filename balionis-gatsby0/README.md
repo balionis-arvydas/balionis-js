@@ -110,7 +110,7 @@ $ curl -X GET http://localhost:8000/my-files
 $ npm install --save gatsby-transformer-remark
 ```
 - gatsby-config.js
-- src/pages/my-posts.js
+- src/pages/posts.js
 - src/pages/posts/post1.md
 - src/pages/posts/post2.md
 - src/components/post.js
@@ -118,3 +118,13 @@ $ npm install --save gatsby-transformer-remark
 ```
 $ curl -X GET http://localhost:8000/my-posts
 ```
+
+9. Add createPage
+- gatsby-node.js
+- src/templates/post-page.js
+- src/components/post.js 
+- src/pages/posts.js
+- src/pages/index.js
+
+10. Add custom 404 (NotFound)
+- src/pages/404.js
