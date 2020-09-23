@@ -1,0 +1,27 @@
+.container {
+    margin: 3rem auto;
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.link { 
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.header {
+    margin-bottom: 1.5rem;
+}
+
+.trademark {
+    text-shadow: none;
+    background-image: none;
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    float: right;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}

@@ -64,3 +64,22 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
 12. **`README.md`**: A text file containing useful reference information about your project.
+
+## Steps: 
+
+1. Start with 
+- src/pages/index.js 
+
+2. Add global styles
+- src/styles/globals.css
+- gatsby-browser.js
+
+3. Add pages
+- src/pages/about.js 
+- src/pages/contact.js 
+
+4. Add components (and component styles)
+- src/components/layout.js
+
+5. Add components (and component styles)
+- src/components/layout.js
