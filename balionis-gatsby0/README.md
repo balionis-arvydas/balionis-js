@@ -83,3 +83,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 5. Add components (and component styles)
 - src/components/layout.js
+
+6. Add typography
+
+```
+$ npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
+$ vi gatsby-config.js
+```
