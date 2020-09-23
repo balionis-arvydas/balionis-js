@@ -7,8 +7,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
 
-    console.log(`\nslug=${slug}`)
-
     createNodeField({
       node,
       name: `slug`,
@@ -32,8 +30,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
-  console.log('result=' + JSON.stringify(result, null, 4))
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
