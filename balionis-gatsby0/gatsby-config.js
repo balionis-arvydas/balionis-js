@@ -8,6 +8,8 @@ module.exports = {
   siteMetadata: {
     title: `Title@Metadata`,
     trademark: `MySide@Metadata`,
+    description: `balionis gatsby sandbox...`,
+    author: `arvydas balionis`,
   },  
   plugins: [
     {
@@ -23,6 +25,17 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src/`,
       },
-    },    
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `balionis-gatsby0`,
+        short_name: `balionis-gatsby0`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: `static/favicon.ico`, 
+      },
+    },
+    `gatsby-plugin-react-helmet`,
   ],
 }

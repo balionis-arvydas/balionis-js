@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 
-export default function MyFiles({ data }) {
+export default function Files({ data }) {
   return (
     <Layout>      
       <div>

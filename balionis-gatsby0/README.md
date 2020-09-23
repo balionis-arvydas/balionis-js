@@ -100,9 +100,9 @@ $ vi gatsby-config.js
 $ npm install --save gatsby-source-filesystem
 ```
 - gatsby-config.js
-- src/pages/my-files.js
+- src/pages/files.js
 ```
-$ curl -X GET http://localhost:8000/my-files
+$ curl -X GET http://localhost:8000/files
 ```
 
 8. Add gatsby-transformer-remark (to read .md files)
@@ -111,12 +111,12 @@ $ npm install --save gatsby-transformer-remark
 ```
 - gatsby-config.js
 - src/pages/posts.js
-- src/pages/posts/post1.md
-- src/pages/posts/post2.md
+- src/pages/post1.md
+- src/pages/post2.md
 - src/components/post.js
 - src/components/post.module.css
 ```
-$ curl -X GET http://localhost:8000/my-posts
+$ curl -X GET http://localhost:8000/posts
 ```
 
 9. Add createPage
@@ -129,4 +129,12 @@ $ curl -X GET http://localhost:8000/my-posts
 10. Add custom 404 (NotFound)
 - src/pages/404.js
 
-_Note: when run in ```npm run develop``` then NotFound are forwarded to /dev-404-page/._   
+_Note: when run in ```npm run develop``` then NotFound are forwarded to /dev-404-page/._
+
+11. Add manifest
+
+```
+$ npm install --save-dev gatsby-plugin-manifest
+$ npm install --save gatsby-plugin-react-helmet react-helmet
+```
+- gatsby-config.js

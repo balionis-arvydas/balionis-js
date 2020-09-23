@@ -1,11 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import SEO from "../components/seo"
 
-export default function Home() {
+export default function Home({ data }) {
+  const { site } = data;
+
   return (
     <Layout>
-      <p>This is home!</p>      
+      <SEO title={site.siteMetadata.title} description={site.siteMetadata.description} />
+      <p>This is home!</p>
       <ul style={{listStyle: `none`, margin: 0}}>
         <li><Link to="/posts">Posts</Link></li>
         <li><Link to="/files">Files</Link></li>
@@ -13,3 +17,14 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`
