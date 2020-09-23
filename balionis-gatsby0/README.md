@@ -90,3 +90,12 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 $ npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
 $ vi gatsby-config.js
 ```
+
+7. Add siteMetadata graphql on pages and components
+- src/pages/about.js
+- src/components/layout.js
+
+8. Add gatsby-source-filesystem 
+- gatsby-config.js
+- src/pages/my-files.js
+
