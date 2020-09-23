@@ -128,3 +128,5 @@ $ curl -X GET http://localhost:8000/my-posts
 
 10. Add custom 404 (NotFound)
 - src/pages/404.js
+
+_Note: when run in ```npm run develop``` then NotFound are forwarded to /dev-404-page/._   
