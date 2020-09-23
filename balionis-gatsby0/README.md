@@ -96,6 +96,25 @@ $ vi gatsby-config.js
 - src/components/layout.js
 
 8. Add gatsby-source-filesystem 
+```
+$ npm install --save gatsby-source-filesystem
+```
 - gatsby-config.js
 - src/pages/my-files.js
+```
+$ curl -X GET http://localhost:8000/my-files
+```
 
+8. Add gatsby-transformer-remark (to read .md files)
+```
+$ npm install --save gatsby-transformer-remark
+```
+- gatsby-config.js
+- src/pages/my-posts.js
+- src/pages/posts/post1.md
+- src/pages/posts/post2.md
+- src/components/post.js
+- src/components/post.module.css
+```
+$ curl -X GET http://localhost:8000/my-posts
+```
