@@ -19,7 +19,7 @@ export default function Posts({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: {fields: {slug: {ne: "/_blank/"}}}) {
       totalCount
       edges {
         node {

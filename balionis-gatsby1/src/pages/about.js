@@ -5,8 +5,11 @@ import { graphql } from "gatsby"
 export default function About({ data }) {
   return (
     <Layout>
-      <h1>{data.site.siteMetadata.title}</h1>
-      This is about!
+      <p>This is about!</p>
+      <p>
+        <strong>Description:</strong> {data.site.siteMetadata.description}<br/>
+        <strong>Author:</strong> {data.site.siteMetadata.author}
+      </p>
     </Layout>
   )
 }
@@ -15,7 +18,8 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
-        title
+        description
+        author
       }
     }
   }

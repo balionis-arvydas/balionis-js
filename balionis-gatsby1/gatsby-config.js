@@ -6,9 +6,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Title@Metadata`,
-    trademark: `MySide@Metadata`,
-    description: `balionis gatsby sandbox...`,
+    title: `MyTitle`,
+    trademark: `MyTrademark`,
+    description: `My Description goes here...`,
     author: `arvydas balionis`,
   },  
   plugins: [
@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `balionis-gatsby0`,
-        short_name: `balionis-gatsby0`,
+        name: `balionis-gatsby1`,
+        short_name: `balionis-gatsby1`,
         start_url: `/`,
         display: `standalone`,
         icon: `static/favicon.ico`, 

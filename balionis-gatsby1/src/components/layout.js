@@ -29,7 +29,6 @@ export default function Layout({ children }) {
         <ul className={layoutStyles.menu}>
           <ListLink to="/">Home</ListLink>
           <ListLink to="/about/">About</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
         </ul>
       </header>
       {children}

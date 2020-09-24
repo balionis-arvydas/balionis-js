@@ -12,7 +12,6 @@ export default function Home({ data }) {
       <p>This is home!</p>
       <ul style={{listStyle: `none`, margin: 0}}>
         <li><Link to="/posts">Posts</Link></li>
-        <li><Link to="/files">Files</Link></li>
       </ul>
     </Layout>
   )
