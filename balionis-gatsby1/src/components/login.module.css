@@ -1,0 +1,13 @@
+.entry {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.entry label {
+    width: 30%;
+}
+
+.entry input {
+    width: 70%;
+}

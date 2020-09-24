@@ -1,6 +1,7 @@
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import { useStaticQuery, Link, graphql, navigate } from "gatsby"
 import layoutStyles from "./layout.module.css"
+import { isLoggedIn, logout } from "../services/auth"
 
 const ListLink = props => (
     <li className={layoutStyles.link}>
@@ -29,6 +30,20 @@ export default function Layout({ children }) {
         <ul className={layoutStyles.menu}>
           <ListLink to="/">Home</ListLink>
           <ListLink to="/about/">About</ListLink>
+          {isLoggedIn() ? (
+            <ListLink to="/app/profile">Profile</ListLink>
+          ) : null}
+          <li className={layoutStyles.link}>
+            <a
+              href="/"
+              onClick={event => {
+                event.preventDefault()
+                logout(() => navigate(`/app/login`))
+              }}
+            >
+              {isLoggedIn() ? (`Logout`) : (`Login`)}          
+            </a>
+          </li>
         </ul>
       </header>
       {children}
