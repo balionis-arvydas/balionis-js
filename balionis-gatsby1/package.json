@@ -8,7 +8,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "pack": "rm -rf dist && mkdir dist && cp package.json ./public && cd ./public && npm-pack-zip && mv balionis-gatsby1.zip ../dist"
   },
   "dependencies": {
     "gatsby": "^2.24.63",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-manifest": "^2.4.31",
+    "npm-pack-zip": "^1.2.7",
     "prettier": "2.1.1"
   }
 }
