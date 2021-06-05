@@ -5,6 +5,7 @@ I expect to use this code as baseline for other angular v11+ prototypes.
 
 ## Build
 
+`npm install`
 `npm run build`
 `npm run test`
 `npm run e2e`
